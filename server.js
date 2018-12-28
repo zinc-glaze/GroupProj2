@@ -5,6 +5,14 @@ var exphbs = require("express-handlebars");
 var db = require("./models");
 
 var app = express();
+
+var mysql = require('mysql');
+var wrap = require('word-wrap');
+var Table = require('cli-table');
+var inquirer = require('inquirer');
+var colors = require('colors');
+
+
 var PORT = process.env.PORT || 3000;
 
 // Middleware
@@ -34,13 +42,10 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+db.sequelize.sync({force: true}).then(function(){
+	app.listen(PORT, function(){
+	console.log("listenning on http://localhost:" + PORT);
+    
   });
 });
 

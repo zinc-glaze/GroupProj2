@@ -1,3 +1,8 @@
-.list-group-item {
+/* .list-group-item {
   line-height: 2.5;
+} */
+
+div.recipe-card:hover {
+  cursor: pointer;
 }
+

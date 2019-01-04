@@ -23,4 +23,11 @@ module.exports = function(app) {
       res.json(dbRecipe);
     });
   });
+
+  // Get all ingredients from Fridge
+  app.get("/api/fridge", function(req, res) {
+    db.Fridge.findAll({}).then(function(dbFridge) {
+      res.json(dbFridge);
+    });
+  });
 };

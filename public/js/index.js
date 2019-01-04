@@ -8,6 +8,15 @@ app.use(express.static("views/images"));
 
 // The API object contains methods for each kind of request we'll make
 var API = {
+  getIngredients: function() {
+    // eslint-disable-next-line prettier/prettier
+    var ing = $("#addIngredient").val().trim();
+    return $.ajax({
+      url: "api/recipe",
+      type: "GET",
+      data: ing
+    });
+  },
   saveExample: function(example) {
     return $.ajax({
       headers: {

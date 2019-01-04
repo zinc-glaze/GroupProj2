@@ -3,10 +3,10 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples
+        recipe: dbRecipes
       });
     });
   });
@@ -14,11 +14,11 @@ module.exports = function(app) {
   //Load Fridge page
   app.get("/fridge", function(req, res) {
     //replace line below with correct database query
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("fridge", {
         //replace 2 lines below with correct info
         msg: "Welcome!",
-        examples: dbExamples
+        recipes: dbRecipes
       });
     });
   });
@@ -26,20 +26,20 @@ module.exports = function(app) {
   //Load Recipe Results page
   app.get("/recipes", function(req, res) {
     //replace line below with correct database query
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Recipe.findAll({}).then(function(dbRecipes) {
       res.render("recipes", {
         //replace lines below with correct info
         msg: "Welcome!",
-        examples: dbExamples
+        recipes: dbRecipes
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  // Load recipe page and pass in an recipe by id
+  app.get("/recipe/:id", function(req, res) {
+    db.Recipe.findOne({ where: { id: req.params.id } }).then(function(dbRecipe) {
+      res.render("recipe", {
+        recipe: dbRecipe
       });
     });
   });

@@ -53,3 +53,9 @@ h6 {
   font-size: 25px;
 }
 /* END Fonts */
+
+/* FlexBox */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}

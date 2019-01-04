@@ -1,46 +1,32 @@
-DROP DATABASE IF EXISTS recipe_db;
-CREATE DATABASE recipe_db;
+DROP DATABASE IF EXISTS recipebox;
+CREATE DATABASE recipebox;
 
-USE `recipe_db`;
+USE `recipebox`;
 
 CREATE TABLE recipes(
-    recipe_name VARCHAR (50) NOT NULL PRIMARY KEY,
-    protein VARCHAR (50) NOT NULL,
-    ingredient1 VARCHAR (50) NOT NULL,
-    ingredient2 VARCHAR(50) NOT NULL,
-    ingredient3 VARCHAR(50) NOT NULL,
-    ingredient4 VARCHAR(50) NOT NULL,
-    ingredient5 VARCHAR(50) NOT NULL
+    id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    recipe_name VARCHAR (50) NOT NULL,
+    protein VARCHAR (30) NOT NULL,
+    ingredient1 VARCHAR (30) NOT NULL,
+    ingredient2 VARCHAR(30) NOT NULL,
+    ingredient3 VARCHAR(30) NOT NULL,
+    ingredient4 VARCHAR(30) NOT NULL,
+    ingredient5 VARCHAR(30) NOT NULL,
+    photo VARCHAR(200)NOT NULL
 );
-DROP DATABASE IF EXISTS fridge_db;
-CREATE DATABASE fridge_db;
-
-USE `fridge_db`;
-
-CREATE TABLE items(
-    item_name VARCHAR (50) NOT NULL PRIMARY KEY,
+CREATE TABLE fridge(
+    id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    item_name VARCHAR (50) NOT NULL,
     amount INTEGER NOT NULL
 );
-    
-
- DROP DATABASE IF EXISTS pantry_db;
-CREATE DATABASE pantry_db;
-
-USE `pantry_db`;
-
-CREATE TABLE essentials(
-    item_name VARCHAR (50) NOT NULL PRIMARY KEY,
+CREATE TABLE pantry(
+    id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    item_name VARCHAR (50) NOT NULL,
     amount INTEGER NOT NULL
 );
-
-DROP DATABASE IF EXISTS shoppinglist_db;
-CREATE DATABASE shoppinglist_db; 
-
-USE `shopp
-inglist_db`;
-
-CREATE TABLE lists(
-    item_name VARCHAR (50) NOT NULL PRIMARY KEY,
+CREATE TABLE shoppinglist(
+    id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    item_name VARCHAR (50) NOT NULL,
     amount INTEGER NOT NULL
 );
 

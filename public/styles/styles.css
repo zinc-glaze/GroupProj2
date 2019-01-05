@@ -36,6 +36,9 @@ h5 {
   color: rgb(250, 189, 21);
   text-shadow: 2px 2px 4px #000000;
 }
+h3 {
+  font-size: 3vw;
+}
 p {
   font-size: 25px;
 }
@@ -49,6 +52,10 @@ h2 {
   font-weight: bolder;
   font-size: 57px;
 }
+h4 {
+  color: rgb(255,255,255);
+  font-weight: bolder;
+}
 h6 {
   font-size: 25px;
 }
@@ -58,4 +65,31 @@ h6 {
 .flex-container {
   display: flex;
   flex-direction: column;
+  /* background-color: rgb(185,212,227); */
+  background-color: rgb(194,194,194);
+  background-image: url("../images/orangefridge.png");
+  background-size: 100%;
+  min-height: 200vh;
+
+}
+.jumbotron {
+  background: rgba(172, 172, 172, 0.6);
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 12vw;
+  margin-right: 12vw;
+}
+
+.btn-secondary {
+  width: 40vw;
+}
+
+.fridge-confirm {
+  padding-left: 12px;
+}
+
+.list-group-item {
+  background: rgba(172, 172, 172, 0.6);
 }

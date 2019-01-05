@@ -1,5 +1,5 @@
 <!-- Still need to add Handlebars expressions and helpers -->
-
+<div class="flex-container">
 <div class="container">
   <!-- Progress Bar -->
   <div class="progress mb-4">
@@ -7,24 +7,32 @@
   </div>
   <!-- Instructions -->
   <div class="jumbotron">
-    <h1 class="display-4">Smart Fridge</h1>
-    <p class="lead">Here are the ingredients you currently have at home. Confirm and find a recipe.</p>
+    <h1 class="display-7">Smart Fridge</h1>
+    
     			<div class="dropdown">
 				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				  Dropdown button
+				  <h3>(1) Choose a Protein!</h3>
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				  <a class="dropdown-item" href="#">Action</a>
-				  <a class="dropdown-item" href="#">Another action</a>
-				  <a class="dropdown-item" href="#">Something else here</a>
+				  <a class="dropdown-item" href="#">Chicken</a>
+				  <a class="dropdown-item" href="#">Ground Beef</a>
+				  <a class="dropdown-item" href="#">Steak</a>
+          <a class="dropdown-item" href="#">Tofu</a>
+          <a class="dropdown-item" href="#">Pintos</a>
+          <a class="dropdown-item" href="#">Black Beans</a>
+          <a class="dropdown-item" href="#">Shrimp</a>          
+          <a class="dropdown-item" href="#">Fish</a>
 				</div>
 			  </div>
 			  <br>
-			<a class="btn btn-primary" href="recipes" role="button">Search Recipes</a>
+        <div class="fridge-confirm"><h4>(2) Confirm what you have at home in the fridge below.</h3></div>
+        <br>
+			<a class="btn btn-primary" href="recipes" role="button"><h4>What Can I Make?!</h4></a>
   </div>
   <!-- Add Ingredient to Fridge -->
+  <div class="jumbotron">
   <h6>Add an item to your fridge</h6>
-  <form class="form-inline">
+  <form class="form-inline justify-content-center">
     <label class="sr-only" for="addIngredient">Name</label>
     <input type="text" class="form-control mb-2 mr-sm-2" id="addIngredient" placeholder="Mustard">
   
@@ -38,9 +46,110 @@
   
     <button type="submit" class="btn btn-primary btn-sm mb-2">+</button>
   </form>
+  </div>
   <!-- Ingredients List -->
-  <div class="row">
-    <div class="col-sm">
+      <ul class="list-group mb-4">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Chicken Broth
+            <span class="badge badge-primary badge-pill">2</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Milk
+            <span class="badge badge-primary badge-pill">1</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Carrots
+            <span class="badge badge-primary badge-pill">11</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Soy Sauce
+            <span class="badge badge-primary badge-pill">1</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Spinach
+            <span class="badge badge-primary badge-pill">4</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Ketchup
+            <span class="badge badge-primary badge-pill">1</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Broccoli
+            <span class="badge badge-primary badge-pill">3</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Cheddar Cheese
+            <span class="badge badge-primary badge-pill">2</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Yogurt
+            <span class="badge badge-primary badge-pill">8</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>
+            Celery
+            <span class="badge badge-primary badge-pill">10</span>
+          </span>
+          <span>
+            <button type="submit" class="btn btn-primary btn-sm mb-2 mr-2">Update Quantity</button>
+            <button type="submit" class="btn btn-primary btn-sm mb-2">Delete Item</button>
+          </span>
+        </li>
+      </ul>
       <ul class="list-group mb-4">
         {{#each fridge}}
           <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -58,3 +167,11 @@
     </div>
   </div>
 </div>
+</div>
+
+{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> --}}
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<script src="/js/index.js"></script>

@@ -13,12 +13,9 @@ module.exports = function(app) {
 
   //Load Fridge page
   app.get("/fridge", function(req, res) {
-    //replace line below with correct database query
-    db.Recipe.findAll({}).then(function(dbRecipes) {
+    db.Fridge.findAll({}).then(function(dbFridge) {
       res.render("fridge", {
-        //replace 2 lines below with correct info
-        msg: "Welcome!",
-        recipes: dbRecipes
+        fridge: dbFridge
       });
     });
   });

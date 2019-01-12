@@ -1,3 +1,5 @@
+//FRIDGE DATA MODEL
+
 module.exports = function(sequelize, DataTypes) {
   var Fridge = sequelize.define("Fridge", {
     item_name: {

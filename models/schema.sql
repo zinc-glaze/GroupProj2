@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS recipebox;
 CREATE DATABASE recipebox;
 
-USE `recipebox`;
+USE recipebox;
 
 CREATE TABLE recipes(
     id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
